@@ -1,16 +1,16 @@
 PODS:
-  - UberSignature/ObjC (1.0.0)
+  - UberSignature/ObjC (1.0.3)
 
 DEPENDENCIES:
   - UberSignature/ObjC (from `../..`)
 
 EXTERNAL SOURCES:
   UberSignature:
-    :path: ../..
+    :path: "../.."
 
 SPEC CHECKSUMS:
-  UberSignature: 33ff12cdcd8104096620763a6084ca878ab60b76
+  UberSignature: 2322c4b522cedf34c5caf4ba55b6901560bf6462
 
-PODFILE CHECKSUM: e4144f9fd4e89f4e7b95298443540bce2ae32e0d
+PODFILE CHECKSUM: 91a9aaa0ceee8e1515838932831a19897e10157b
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.11.3

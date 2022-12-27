@@ -177,6 +177,16 @@
     [self _updateViewFromModel];
 }
 
+- (void)updateModelWithPoint:(CGPoint)touchPoint endContinuousLine:(BOOL)endContinuousLine
+{
+    if (endContinuousLine) {
+        [self.model asyncEndContinuousLine];
+    }
+    [self.model asyncUpdateWithPoint:touchPoint];
+    
+    [self _updateViewFromModel];
+}
+
 - (void)_updateViewFromModel
 {
     [self.model asyncGetOutputWithBlock:^(UIImage *signatureImage, UIBezierPath *temporarySignatureBezierPath) {

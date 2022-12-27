@@ -72,6 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 
+- (void)updateModelWithPoint:(CGPoint)touchPoint endContinuousLine:(BOOL)endContinuousLine;
 @end
 
 NS_ASSUME_NONNULL_END

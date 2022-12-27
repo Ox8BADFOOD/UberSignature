@@ -141,7 +141,6 @@
 				81D156131DC11259000EC97C /* Frameworks */,
 				81D156141DC11259000EC97C /* Resources */,
 				431CDAE455A38F7C048DF034 /* [CP] Embed Pods Frameworks */,
-				5C09FA6E85DE4EBCA8739AE9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +180,7 @@
 				TargetAttributes = {
 					81D156151DC11259000EC97C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TE6X2QFU3K;
 						ProvisioningStyle = Automatic;
 					};
 					81D1562E1DC11259000EC97C = {
@@ -196,6 +196,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -236,7 +237,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-UberSignature/Pods-UberSignature-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-UberSignature/Pods-UberSignature-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/UberSignature/UberSignature.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -245,22 +246,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UberSignature/Pods-UberSignature-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C09FA6E85DE4EBCA8739AE9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UberSignature/Pods-UberSignature-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UberSignature/Pods-UberSignature-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7E66F765099BF56732D666A1 /* [CP] Check Pods Manifest.lock */ = {
@@ -420,7 +406,7 @@
 			baseConfigurationReference = FBA1B4C75285D7D3B34EFF3A /* Pods-UberSignature.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TE6X2QFU3K;
 				INFOPLIST_FILE = UberSignature/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,7 +420,7 @@
 			baseConfigurationReference = D6B7D49629760510F8016765 /* Pods-UberSignature.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TE6X2QFU3K;
 				INFOPLIST_FILE = UberSignature/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

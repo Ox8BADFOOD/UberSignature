@@ -27,7 +27,7 @@
 
 @property (nonatomic) UBSignatureDrawingViewController *signatureViewController;
 @property (nonatomic) UIButton *resetButton;
-
+@property(nonatomic,strong) UIButton *drawBtn;
 @end
 
 @implementation UBDemoViewController
@@ -63,6 +63,9 @@
                                 [NSLayoutConstraint constraintWithItem:self.signatureViewController.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0],
                                 ]];
     
+   // drawBtn
+    [self.view addSubview:self.drawBtn];
+    self.drawBtn.frame = CGRectMake(100, 20, 50, 40);
 }
 
 #pragma mark - Private
@@ -72,6 +75,17 @@
     [self.signatureViewController reset];
 }
 
+-(void)draw{
+    [self.signatureViewController updateModelWithPoint:CGPointMake(0, 0) endContinuousLine:true];
+    [self.signatureViewController updateModelWithPoint:CGPointMake(1, 1) endContinuousLine:false];
+    [self.signatureViewController updateModelWithPoint:CGPointMake(3, 5) endContinuousLine:false];
+    [self.signatureViewController updateModelWithPoint:CGPointMake(10, 20) endContinuousLine:false];
+    [self.signatureViewController updateModelWithPoint:CGPointMake(12, 50) endContinuousLine:false];
+    [self.signatureViewController updateModelWithPoint:CGPointMake(12, 52) endContinuousLine:false];
+    [self.signatureViewController updateModelWithPoint:CGPointMake(50, 90) endContinuousLine:false];
+    [self.signatureViewController updateModelWithPoint:CGPointMake(51, 99) endContinuousLine:false];
+}
+
 #pragma mark - <UBSignatureDrawingViewControllerDelegate>
 
 - (void)signatureDrawingViewController:(UBSignatureDrawingViewController *)signatureDrawingViewController isEmptyDidChange:(BOOL)isEmpty
@@ -79,4 +93,13 @@
     self.resetButton.hidden = isEmpty;
 }
 
+-(UIButton *)drawBtn{
+    if(!_drawBtn){
+        _drawBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_drawBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [_drawBtn setTitle:@"draw" forState:UIControlStateNormal];
+        [_drawBtn addTarget:self action:@selector(draw) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _drawBtn;
+}
 @end
