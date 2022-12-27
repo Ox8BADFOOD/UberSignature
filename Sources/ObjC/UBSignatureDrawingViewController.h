@@ -63,6 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) UIColor *signatureColor;
 
+@property (nonatomic,readonly) UIImageView *imageView;
 /**
  Delegate to receive view controller callbacks.
  */
