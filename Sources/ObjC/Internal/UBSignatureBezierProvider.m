@@ -192,7 +192,7 @@ static NSUInteger const kUBMaxPointIndex = 3;
     /**
      The is the maximum length that will vary weight. Anything higher will return the same weight.
      */
-    static const CGFloat maxLengthRange = 50.0f;
+    static const CGFloat maxLengthRange = 25.0f;
     
     /*
      These are based on having a minimum line thickness of 2.0 and maximum of 7, linearly over line lengths 0-maxLengthRange. They fit into a typical linear equation: y = mx + c

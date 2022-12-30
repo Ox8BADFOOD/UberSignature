@@ -144,7 +144,7 @@
     [super viewDidLayoutSubviews];
     
     self.model.imageSize = self.view.bounds.size;
-    [self _updateViewFromModel];
+//    [self _updateViewFromModel];
 }
 
 #pragma mark - UIResponder
