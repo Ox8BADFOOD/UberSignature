@@ -125,6 +125,7 @@
 
 - (void)signatureBezierProvider:(UBSignatureBezierProvider *)provider generatedFinalizedSignatureBezier:(UIBezierPath *)finalizedSignatureBezier
 {
+    finalizedSignatureBezier.lineWidth = 5;
     self.signatureImage = [self _signatureImageAddingBezierPath:finalizedSignatureBezier];
 }
 

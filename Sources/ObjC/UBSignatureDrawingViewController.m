@@ -81,6 +81,7 @@
     self.model.signatureColor = signatureColor;
     self.bezierPathLayer.strokeColor = self.signatureColor.CGColor;
     self.bezierPathLayer.fillColor = self.signatureColor.CGColor;
+    self.bezierPathLayer.lineWidth = 5;
 }
 
 - (void)setIsEmpty:(BOOL)isEmpty

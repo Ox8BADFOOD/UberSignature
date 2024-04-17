@@ -67,6 +67,7 @@ static NSUInteger const kUBMaxPointIndex = 3;
     }
     
     UIBezierPath *newBezier = [self _generateBezierPathWithPointIndex:self.nextPointIndex - 1];
+    newBezier.lineWidth = 5;
     [self _notifyDelegateWithTemporarySignatureBezier:newBezier];
 }
 
@@ -170,7 +171,6 @@ static NSUInteger const kUBMaxPointIndex = 3;
     if (![self.delegate respondsToSelector:@selector(signatureBezierProvider:updatedTemporarySignatureBezier:)]) {
         return;
     }
-    
     [self.delegate signatureBezierProvider:self updatedTemporarySignatureBezier:bezier];
 }
 
